@@ -1,0 +1,78 @@
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 8px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.dashboard__back-button {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+}
+
+.dashboard__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard__header {
+  margin-bottom: 24px;
+}
+
+.dashboard__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.dashboard__main-content {
+  flex: unset;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.dashboard__sidebar {
+  flex: unset;
+  min-width: 0;
+  width: 100%;
+  margin-top: 16px;
+}
+
+/* Tablet and Desktop styles */
+@media (min-width: 768px) {
+  .dashboard {
+    padding: 16px;
+  }
+
+  .dashboard__layout {
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .dashboard__main-content {
+    flex: 7;
+    gap: 24px;
+    width: auto;
+  }
+
+  .dashboard__sidebar {
+    flex: 5;
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+/* Large screen styles */
+@media (min-width: 1024px) {
+  .dashboard {
+    padding: 24px;
+  }
+}
